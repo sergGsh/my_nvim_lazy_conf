@@ -26,12 +26,12 @@ local function setup_plugins()
     require("lazy").setup({
         {
         
-            "nvim-treesitter/nvim-treesitter",
+          "nvim-treesitter/nvim-treesitter",
             "kyazdani42/nvim-web-devicons",
             "nvim-treesitter/nvim-treesitter",
             "nvim-lualine/lualine.nvim",
             "nvim-tree/nvim-tree.lua",
-            "nvim-telescope/telescope.nvim",
+             "nvim-telescope/telescope.nvim",
             "neovim/nvim-lspconfig",
             "goolord/alpha-nvim",
             "windwp/nvim-autopairs",
