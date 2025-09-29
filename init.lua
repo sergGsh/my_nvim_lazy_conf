@@ -63,6 +63,7 @@ require("config.keymaps")
 
 -- Настройка иконок
 require('nvim-web-devicons').setup{
+  override = {},
   default = true,
 }
 
