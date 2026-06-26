@@ -1,0 +1,30 @@
+return {
+"akinsho/toggleterm.nvim",
+version = "*",
+ dependencies = {"neovim/nvim-lspconfig"},
+opts = {
+directional = "horizontal",
+size = 15,
+start_in_insert = true,
+},
+config = function(_, opts)
+require("toggleterm").setup(opts)
+
+vim.api.nvim_create_autocmd("BufReadPost", {
+pattern ="*.cpp",
+callback = function()
+local util = util.root_pattern("CmakeLists.txt", ".git")(vim.fn.expand("%:p"))
+root = root or vim.fn.getcwd()
+local term = Terminal:new({
+    dir = root,
+    direction =" horizontal",
+    close_on_exit = false,
+    hidden = true,
+})
+term:toggle()
+
+
+end,
+})
+end,
+}
